@@ -1,0 +1,522 @@
+@font-face{
+    font-family: "Roboto";
+    src: url(/Font/RobotoCondensed-VariableFont_wght.ttf);
+    font-weight: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Roboto;
+}
+
+
+/*
+Naranja: #F24405
+Naranja Claro: #FA7F08
+Celeste Oscuro:#348888
+Celeste Medio: #22BABB
+Celeste Claro: #9EF8EE
+
+*/
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+#contenedor {
+    height: 100vh;
+    max-width: 100vw;
+    
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto auto;
+    background-color: black;
+}
+
+nav {
+    width: 100%;
+    grid-column: 1 / span 2;    
+    background-color: #FA7F08; 
+    margin-bottom: 2px;
+    margin-top: 1px;
+}
+
+    nav a{
+        text-decoration: none;
+        list-style: none;
+        color: black;
+    }
+
+    nav img{
+        padding-left: 1%;
+        height: 60px;
+    }
+
+    nav ul {
+        width: 100%;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+        nav ul, nav {
+            display: flex;
+            align-items: end; 
+            list-style: none; 
+        }
+
+        nav ul li {
+            background-color: #FA7F08;
+            padding: 0.3% 3%;
+        }
+
+        nav ul li a:hover{
+            font-weight:bolder;
+            
+        }
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    list-style: none; 
+    background-image: url(/img/rawpixel-com-lifeofpix-rawpixelcom1624-306500.jpg);
+    background-size: cover; 
+    padding: 3px;
+}
+
+    #home img{
+        height: 100%;
+    }
+
+    #home h1,  #home div{
+        color: #348888;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 0 10%;
+        float: right;
+
+    }
+    #home h1{
+        color: #348888;
+        background-color: rgba(0, 0, 0, 0.671);
+        font-size: 3rem;
+        margin-top: 15%;
+        width: 100%;
+    }
+    #home div{
+
+        font-size: 1rem;
+
+    }
+
+aside {
+    overflow-y: auto;
+    width: 100%;
+    padding: 5% 5%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+}
+
+aside h2 {
+    margin: 0 0 10px 0;
+    color: #0200009a;
+    font-size: 0.8rem;
+    text-align:right; 
+
+}
+
+.noticia {
+    margin-bottom: 15px;
+    border-left: 1px solid #34888857;
+    padding-left: 4px;
+}
+
+.titulo-noticia h3 {
+    color: #348888;
+    font-size: 1.2rem;
+}
+
+.contenido{
+    margin-bottom: 19%;
+}
+    .contenido p {
+        color: #666;
+        font-size: 0.8rem;
+    }
+
+    .contenido a {
+        float: right;
+        font-size: 1rem;
+        margin-top: 0.6px;
+        color: #348888;
+        text-decoration: none;
+    }
+
+
+    .footer {
+        width: 100%;
+        background-color: #000000;
+        padding: 10px;
+        text-align: center;
+        color: #9ef8ee67;
+        font-size: 0.7rem;
+    }
+        .footer .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+
+    .social-media a img{
+        width: 25px;
+    }
+
+
+    /*AÑADIMOS COMPORTAMIENTO SI EL ANCHO CAE POE DEBAJO DE 768*/
+    @media screen and (max-width: 768px) {
+        #contenedor {
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+        }
+    
+        nav ul, nav {
+            flex-direction: column;
+        }
+    
+        nav ul li {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+    
+/*        QUIENES SOMOS  *******************************************/
+
+
+/*Para cambiar el color de los titulos, pruebas diseño*/
+.titulo1{
+    color:#F24405;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
+}
+.titulo2{
+    color:#348888;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: justify;
+}
+/*Contenedor Quienes Somos*/
+.containerQuienes{
+    /* Auto a los lados */
+    margin: 10px auto;
+    /* De la caja contenedora que ocupe el 90% */
+    width:90%;
+    justify-content: space-between;
+}
+
+/*Aplicamos estilos a la parte principal*/
+.mainQuienes{
+    background-color: #FA7F08;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.831);
+    border-radius: 20px;
+}
+.mainQuienes section{
+    /* Cada seccion ocupe su 100% espacio */
+    width: 100%;
+}
+section.quienes_text{
+    color:#348888;
+    font-weight: bolder;
+    padding:0.5em;
+}
+/* Justificamos texto de los parrafos */
+section.quienes_text p{
+    text-align: justify;
+}
+section.quienes_img{
+    display: none;
+    align-items: center;
+}
+section.quienes_img img{
+    /* El tamaño imagen */
+    height: 500px;
+    width:100%;
+    border-radius: 20px;
+}
+/* La caja del equipo de trabajo */
+section.equipo{
+    justify-content: space-between;
+    padding: 0.2em;
+}
+.persona{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    /* separamos las imagenes */
+    margin: 30px;
+}
+.persona .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* visibilidad cara posterior */
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.persona .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0px 5px 10px black;
+}
+.persona .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Redimensionar contenido para ajustarse al contenedor */
+    object-fit: cover;
+}
+.persona .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: brown;
+    background: #34888886;
+    text-align: center;
+    margin: 0px;
+}
+.persona .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #9EF8EE;
+    padding: 5px;
+    color: #348888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px black;
+}
+.persona .back h3{
+    /* font-size: 10px; */
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.persona .back p{
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+.persona:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.persona:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*Ajustes para hacer que la web sea Responsive*/
+/* Elijimos los elementos afectados */
+@media  screen and (min-width:576px) {
+    section.quienes_img{
+        display: flex;
+    }
+}
+@media  screen and (min-width:992px) {
+    section.equipo{
+        display: flex;
+    }
+    .mainQuienes{
+        display: flex;
+    }
+}
+
+
+
+
+    /*      SERVICIOS *********************************************/ 
+.titulo{
+    box-sizing: border-box;
+    background-color: black;
+    font-size: large;
+    color: #22BABB;
+    text-align: center;
+    opacity: 65%;
+    height: 100px;
+    width: 100%;
+    margin: 40px auto;
+}
+.titulo h1, p{
+    margin: 15px;
+}
+
+
+.titulo h1{
+    color: #348888;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 10%;
+}
+
+.container{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    width: 1350px;
+    height: 500px;
+    margin: auto;
+}
+article.container_article{
+    max-width: 400px;
+    background-color: #FA7F08;
+    border-radius: 25px;
+    margin: 1rem;
+    box-shadow: 0 0 20px black;
+}
+.container_img{
+    position: relative;
+    width: 19.8rem;
+}
+img{
+    max-width: 100%;
+}
+.imagen_fija1{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0;
+}
+.gif1{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0; 
+    opacity: 0;
+}
+.imagen_fija1:hover{
+    opacity: 0;
+}
+.gif1:hover{
+   opacity: 1;
+}
+.imagen_fija2{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0;
+}
+.gif2{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0; 
+    opacity: 0;
+}
+.imagen_fija2:hover{
+    opacity: 0;
+}
+.gif2:hover{
+   opacity: 1;
+}
+.imagen_fija3{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0;
+}
+.gif3{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0;
+    opacity: 0;
+}
+.imagen_fija3:hover{
+    opacity: 0;
+}
+.gif3:hover{
+   opacity: 1;
+}
+.imagen_fija4{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0;
+}
+.gif4{
+    position: absolute;
+    max-height: 250px;
+    height: 250px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    cursor: pointer;
+    inset: 0;
+    opacity: 0;
+}
+.imagen_fija4:hover{
+    opacity: 0;
+}
+.gif4:hover{
+   opacity: 1;
+}
+.container_footer{
+    margin: 275px 10px 10px 10px;
+    padding: 0 1rem;
+}
+.container_categoría{
+    margin-top: 1rem;
+}
+.container_categoría span{
+    background-color: #348888;
+    color: white;
+    padding: 1px;
+    border-radius: 5px;
+}
+.container_texto{
+    font-weight: bold;
+}
+.boton{
+    padding: 10px 20px;
+    background-color: #22BABB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 175px;
+    cursor: pointer;
+}
+.boton:hover{
+    background-color: #348888;  
+}
+.boton a{
+    text-decoration: none;
+    color: white;
+}
