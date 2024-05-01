@@ -157,12 +157,14 @@ aside h2 {
 
 
     .footer {
+            display: block;
         width: 100%;
         background-color: #000000;
         padding: 10px;
         text-align: center;
         color: #9ef8ee67;
         font-size: 0.7rem;
+        
     }
         .footer .social-media a {
             margin: 0 10px;
@@ -520,3 +522,131 @@ img{
     text-decoration: none;
     color: white;
 }
+
+
+
+
+    /*      FORMULARIO *********************************************/ 
+
+
+
+    #formbody {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: #f1f1f1;
+        width: 100%;
+      }
+      
+      .containerr {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+      }
+      
+    
+      
+      .sectiion {
+        padding: 15px;
+        margin-bottom: 20px;
+        /*border-radius: 8px;*/
+      }
+      
+      #datos {
+          background-color: #cdf7f2; 
+      }
+      
+      #seguro {
+        background-color: #8ad1d2; 
+      }
+      
+      #solicitud {
+          background-color: #f0b77f;
+      }
+      
+      
+      
+      
+      
+      .radio-options {
+        display: flex;
+        align-items: center;
+      }
+      
+      .sub-options {
+        padding-left: 20px; 
+      }
+      
+      .sub-radio-options {
+        margin-top: 5px; 
+      }
+      
+      .radio-options input[type="radio"] {
+        margin-right: 10px;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      .radio-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .radio-container input[type="radio"] {
+        margin-right: 10px;
+      }
+      
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #91b8b8;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #348888;
+      }
+      
+      .inline-fields {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .inline-fields .field {
+        flex: 1;
+        margin-right: 10px;
+      }
+      
+      .inline-fields .field:last-child {
+        margin-right: 0;
+      }
+      
+      .form{
+        margin-top: 180px;
+      }
+
+
+
+
+
+
+
